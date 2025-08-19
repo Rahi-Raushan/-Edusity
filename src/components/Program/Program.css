@@ -40,3 +40,27 @@
   opacity: 1;
   padding-top: 0;
 }
+
+@media (max-width: 768px) {
+  .programs {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .program {
+    flex-basis: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs {
+    margin: 40px auto;
+    gap: 20px;
+  }
+  .caption img {
+    width: 40px;
+  }
+  .caption h3 {
+    font-size: 16px;
+  }
+}

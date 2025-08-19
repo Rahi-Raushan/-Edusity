@@ -1,62 +1,141 @@
 .testimonials{
   margin: 80px auto;
-  padding: 0 80px;
+  padding: 0 60px;
   position: relative;
-
+  width: 90%;
+  max-width: 1200px;
 }
 .next-btn,.back-btn{ 
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 10px;
   padding: 10px;
   transform: translateY(-50%);
   width: 40px;
   border-radius: 50%;
   background:#212EA0;
   cursor: pointer;
+  z-index: 2;
 }
 .back-btn{
-  left: 0;
+  left: 10px;
   right: auto;
 }
 .slider{
   overflow: hidden;
+  margin: 0 20px;
 }
 .slider ul{
   display: flex;
-  width: 200%;
+  width: 400%;
   overflow-x: hidden;
-  transition: 05s;
- 
+  transition: 0.5s;
+  margin: 0;
+  padding: 0;
 }
  .slider ul li{
-  width: 50%;
+  width: 25%;
   list-style: none;
-  padding: 20px;
- 
+  padding: 0 15px;
 }
 .slide {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   border-radius: 10px;
   color: #676767;
-  line-height: 1.4;
- 
+  line-height: 1.6;
+  background: #fff;
+  height: auto;
+  min-height: 300px;
 }
 .slide img{
-  width: 90px;
-  border: 4px solid #212EA0;
+  width: 80px;
+  border: 3px solid #212EA0;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .user-info{
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .user-info h3{
   font-weight: 600;
   color: #212EA0;
-  margin: 0;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+.user-info span{
+  color: #999;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 0 30px;
+    margin: 60px auto;
+  }
+  .slider {
+    margin: 0 10px;
+  }
+  .slider ul {
+    width: 200%;
+  }
+  .slider ul li {
+    width: 50%;
+    padding: 0 10px;
+  }
+  .slide {
+    padding: 25px 20px;
+    min-height: 250px;
+  }
+  .slide img {
+    width: 60px;
+    margin-right: 12px;
+  }
+  .next-btn, .back-btn {
+    width: 35px;
+    padding: 8px;
+  }
+  .user-info h3 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 0 50px;
+    margin: 40px auto;
+  }
+  .slider {
+    margin: 0 20px;
+  }
+  .slider ul {
+    width: 400%;
+    flex-direction: row;
+  }
+  .slider ul li {
+    width: 25%;
+    padding: 0 10px;
+  }
+  .slide {
+    padding: 25px 20px;
+    min-height: 280px;
+  }
+  .slide img {
+    width: 60px;
+    margin-right: 12px;
+  }
+  .user-info {
+    margin-bottom: 15px;
+  }
+  .user-info h3 {
+    font-size: 15px;
+  }
+  .next-btn, .back-btn {
+    display: block;
+    width: 30px;
+    padding: 6px;
+  }
 }

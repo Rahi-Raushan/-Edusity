@@ -8,10 +8,10 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+  gap: 10px;
 }
 .gallery img{
   width: 23%;
-  
   border-radius: 10px;
 }
 .campus button{
@@ -21,4 +21,31 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .gallery img {
+    width: 48%;
+  }
+  .campus {
+    margin: 60px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .gallery {
+    flex-direction: column;
+  }
+  .campus button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
 }
